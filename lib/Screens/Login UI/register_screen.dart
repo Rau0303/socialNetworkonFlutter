@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:scocial_network_flutter/Screens/Home%20UI/home_screen.dart';
 import 'package:scocial_network_flutter/Screens/Login%20UI/login_screen.dart';
 import 'package:scocial_network_flutter/Widgets/defaultTextField_widget.dart';
 import 'package:scocial_network_flutter/Widgets/emailTextField_widget.dart';
@@ -20,7 +21,9 @@ class _registerScreenState extends State<registerScreen> {
   TextEditingController userPassController = TextEditingController();
   TextEditingController userRePassController = TextEditingController();
   
-  void onTapRegister(){}
+  void onTapRegister(){
+    Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder: (context)=> const homeScreen()),(route) => false);
+  }
   void onTapLogin(){
    Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder: (context)=> const loginScreen()),(route) => false);
   }
